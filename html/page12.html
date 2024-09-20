@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch Now!</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5eee1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #fff;
+            font-size: 1rem;
+            color: #666;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #999;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            background-color: #2196F3;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            align-self: center;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1976D2;
+        }
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            input, textarea, button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get in Touch Now!</h1>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send It!</button>
+        </form>
+    </div>
+</body>
+</html>
