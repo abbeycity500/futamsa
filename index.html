@@ -5,9 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUTAMSA</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pageIII.css">
+    <link rel="stylesheet" href="css/page5.css">
+    <link rel="stylesheet" href="css/page6.css">
+    <link rel="stylesheet" href="css/page7.css">
+    <link rel="stylesheet" href="css/page8.css">
+    <link rel="stylesheet" href="css/page9.css">
+    <link rel="stylesheet" href="css/page10.css">
+    <style>
+        /* Inline styles for social icons and contact form */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+        .facebook { background-color: #1877F2; }
+        .twitter { background-color: #1DA1F2; }
+        .instagram { background-color: #E4405F; }
+        .tiktok { background-color: #000000; }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+        /* ... (keep the existing inline styles) ... */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5eee1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #fff;
+            font-size: 1rem;
+            color: #666;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #999;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            background-color: #2196F3;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            align-self: center;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1976D2;
+        }
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            input, textarea, button {
+                font-size: 0.9rem;
+            }
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5eee1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 0;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .card h2 {
+                font-size: 1.3rem;
+            }
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
     <!-- Video Background -->
     <video autoplay muted loop class="video-background">
         <source src="videos/backgound.mp4" type="video/mp4">
@@ -15,36 +196,377 @@
     </video>
 
     <!-- Header Section -->
-    <div class="header">
+    <header class="header">
         <div class="logo">
             <img src="images/futamsa-logo.jpg" alt="FUTAMSA Logo" width="50">
             <span>FUTAMSA</span>
         </div>
-        <div class="nav">
-            <a href="about.html">About</a> <!-- Link to About page -->
-            <a href="activities.html">Activities</a> <!-- Link to Activities page -->
-            <a href="join.html">Join Us</a> <!-- Link to Join Us page -->
-        </div>
-        <a href="get-involved.html" class="button">Get Involved</a> <!-- Link to Get Involved page -->
-    </div>
+        <nav class="nav">
+            <a href="about.html">About</a>
+            <a href="activities.html">Activities</a>
+            <a href="join.html">Join Us</a>
+        </nav>
+        <a href="get-involved.html" class="button">Get Involved</a>
+    </header>
 
     <!-- Main Content Section -->
-    <div class="main-content">
-        <h1>FUTAMSA Rocks!</h1>
-        <p>Join the revolution of medical students in Southwest Nigeria!</p>
-        <a href="learn-more.html" class="learn-more">Learn More</a> <!-- Link to Learn More page -->
-        <a href="pageIII.html" class="button">Second Page</a> <!-- Link to the next page -->
-        <a href="page5.html" class="button">Third Page</a> <!-- Link to the next page -->
-        <a href="page6.html" class="button">Fourth Page</a> <!-- Link to the next page -->
-        <a href="page7.html" class="button">Sixth Page</a> <!-- Link to the next page -->
-        <a href="page8.html" class="button">Eight Page</a> <!-- Link to the next page -->
-        <a href="page9.html" class="button">Ninenth Page</a> <!-- Link to the next page -->
-        <a href="page10.html" class="button">Tenth Page</a> <!-- Link to the next page -->
-        <a href="page11.html" class="button">Eleventh Page</a> <!-- Link to the next page -->
-        <a href="page12.html" class="button">Twelfth Page</a> <!-- Link to the next page -->
-        <a href="page13.html" class="button">Thirteenth Page</a> <!-- Link to the next page -->
-    </div>
+    <main>
+        <!-- Main Content Section -->
+        <section class="main-content">
+            <h1>FUTAMSA Rocks!</h1>
+            <p>Join the revolution of medical students in Southwest Nigeria!</p>
+            <a href="learn-more.html" class="learn-more">Learn More</a>
+        </section>
 
+        <!-- Join Section -->
+        <section class="join-section">
+            <div class="container">
+                <div class="image-container">
+                    <img src="https://r.mobirisesite.com/707677/assets/images/photo-1537977193203-d4fce971cb5e.jpeg" alt="Member Image" width="100" height="150">
+                </div>
+                <h1>Become a FUTAMSA Member Today!</h1>
+                <p>Dive into a world of opportunities and friendships!</p>
+                <a href="#" class="join-btn">Join Us Now!</a>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9nXyrGJv9Nw?autoplay=1&loop=1&playlist=9nXyrGJv9Nw&t=20&mute=1&playsinline=1&controls=0&showinfo=0&autohide=1&allowfullscreen=true&mode=transparent" 
+                            title="FUTAMSA Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/150" alt="FUTAMSA Image" width="100" height="150">
+                </div>
+                <h1>FUTAMSA: Where Future Doctors Unite and Thrive!</h1>
+                <p>
+                    Welcome to the Federal University of Technology, Akure Medical Student Association (FUTAMSA),
+                    the coolest club for future healers in Southwest Nigeria! Established in 2023, we're not just
+                    any medical student association; we're the trendsetters, the game-changers, and the ultimate squad
+                    for aspiring doctors.
+                </p>
+                <p>
+                    Our mission? To foster friendship, cooperation, and effective governance among FUTA medical students.
+                    We believe that a little camaraderie goes a long way in the world of medicine. 
+                    After all, who else will understand your caffeine-fueled late-night study sessions and your obsession with anatomy models?
+                </p>
+                <p>
+                    With our dynamic involvement in outreach programs and student politics, we're making waves and earning 
+                    recognition faster than you can say 'stethoscope'. 
+                    Join us as we embark on this thrilling journey of medical education, friendship, and a sprinkle of mischief!
+                </p>
+            </div>
+        </section>
+
+        <!-- Latest Buzz Section -->
+        <section class="latest-buzz">
+            <div class="container">
+                <h1 class="heading">Latest Buzz from FUTAMSA</h1>
+                
+                <div class="buzz-card">
+                    <img src="hospital-image.png" alt="Hospital" class="buzz-image">
+                    <div class="buzz-content">
+                        <h2>FUTAMSA Hosts Epic Health Fair!</h2>
+                        <p class="date">September 10, 2024</p>
+                        <p>Join us for a day of health, fun, and free check-ups! Don't miss out on the excitement!</p>
+                        <a href="#" class="join-btn">Join!</a>
+                    </div>
+                </div>
+
+                <div class="buzz-card">
+                    <img src="surgeon-image.png" alt="Surgeon" class="buzz-image">
+                    <div class="buzz-content">
+                        <h2>Student Politics: The Showdown Begins!</h2>
+                        <p class="date">September 12, 2024</p>
+                        <p>Get ready for the ultimate battle of wits! Who will reign supreme in FUTAMSA politics?</p>
+                        <a href="#" class="join-btn">Join!</a>
+                    </div>
+                </div>
+
+                <div class="buzz-card">
+                    <img src="door-image.png" alt="Door" class="buzz-image">
+                    <div class="buzz-content">
+                        <h2>Outreach Program: Making a Difference!</h2>
+                        <p class="date">September 15, 2024</p>
+                        <p>Our latest outreach program was a hit! Thanks to everyone who participated and made a difference!</p>
+                        <a href="#" class="join-btn">Join!</a>
+                    </div>
+                </div>
+
+                <div class="buzz-card">
+                    <img src="injection-image.png" alt="Injection" class="buzz-image">
+                    <div class="buzz-content">
+                        <h2>FUTAMSA Welcomes New Members!</h2>
+                        <p class="date">September 17, 2024</p>
+                        <p>A warm welcome to our new members! Get ready for an unforgettable journey with us!</p>
+                        <a href="#" class="join-btn">Join!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUTAMSA in Action Section -->
+        <section class="futamsa-in-action">
+            <div class="container">
+                <h1 class="heading">FUTAMSA in Action!</h1>
+                <div class="action-gallery">
+                    <img src="images/image1.png" alt="Image 1" class="gallery-image">
+                    <img src="images/image2.png" alt="Image 2" class="gallery-image">
+                    <img src="images/image3.png" alt="Image 3" class="gallery-image">
+                    <img src="images/image4.png" alt="Image 4" class="gallery-image">
+                </div>
+        
+                <div class="stats-container">
+                    <div class="stat">
+                        <h2 class="stat-number">150+</h2>
+                        <p class="stat-description">Happy Members</p>
+                    </div>
+                    <div class="stat">
+                        <h2 class="stat-number">15+</h2>
+                        <p class="stat-description">Exciting Events</p>
+                    </div>
+                    <div class="stat">
+                        <h2 class="stat-number">100%</h2>
+                        <p class="stat-description">Passion Guaranteed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h1>FUTAMSA FAQs</h1>
+    
+            <div class="faq-container">
+                <div class="faq">
+                    <div class="faq-question">
+                        <h3>What is FUTAMSA all about?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>FUTAMSA is the medical students' association at the Federal University of Technology, Akure. It focuses on the academic, social, and professional development of medical students.</p>
+                    </div>
+                </div>
+    
+                <div class="faq">
+                    <div class="faq-question">
+                        <h3>How can I join FUTAMSA?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can join FUTAMSA by being a registered medical student at FUTA and completing the necessary membership registration process.</p>
+                    </div>
+                </div>
+    
+                <div class="faq">
+                    <div class="faq-question">
+                        <h3>What activities does FUTAMSA engage in?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>FUTAMSA organizes academic seminars, social events, health outreach programs, and professional development workshops for its members.</p>
+                    </div>
+                </div>
+    
+                <div class="faq">
+                    <div class="faq-question">
+                        <h3>What benefits do FUTAMSA members receive?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Members benefit from academic support, professional networking opportunities, leadership training, and participation in local and national medical events.</p>
+                    </div>
+                </div>
+    
+                <div class="faq">
+                    <div class="faq-question">
+                        <h3>How can I get more information about FUTAMSA?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For more information, visit the official FUTAMSA website or contact us through our social media platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buzz Section -->
+        <section class="buzz-section">
+            <h1>Buzz</h1>
+            <div class="buzz-container">
+                <div class="buzz-item">
+                    <p>FUTAMSA is like a family, but cooler!</p>
+                    <img src="images/chinonso.png" alt="Chinonso" class="buzz-image">
+                    <h3>Chinonso</h3>
+                </div>
+    
+                <div class="buzz-item">
+                    <p>I've made lifelong friends here!</p>
+                    <img src="images/emeka.png" alt="Emeka" class="buzz-image">
+                    <h3>Emeka</h3>
+                </div>
+    
+                <div class="buzz-item">
+                    <p>The outreach programs are life-changing!</p>
+                    <img src="images/tolu.png" alt="Tolu" class="buzz-image">
+                    <h3>Tolu</h3>
+                </div>
+    
+                <div class="buzz-item">
+                    <p>Joining FUTAMSA has boosted my confidence!</p>
+                    <img src="images/david.jpg" alt="Ayo" class="buzz-image">
+                    <h3>David</h3>
+                </div>
+    
+                <div class="buzz-item">
+                    <p>The professional workshops are top-notch!</p>
+                    <img src="images/ada.jpg" alt="Funmi" class="buzz-image">
+                    <h3>Ada</h3>
+                </div>
+    
+                <div class="buzz-item">
+                    <p>It's a great place for academic and social growth!</p>
+                    <img src="images/kola.jpg" alt="Ade" class="buzz-image">
+                    <h3>Kola</h3>
+                </div>
+            </div>    
+        </section>
+
+        <!-- Moving Text Section -->
+        <section class="moving-text-section">
+            <div class="moving-text-wrapper">
+                <p class="moving-text">
+                    * Empowering future medical leaders! * Engaging academic experiences! * Building a thriving community! * Developing skills beyond medicine! * FUTAMSA: Where leaders are made! *
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Squad Section -->
+        <section class="our-squad">
+            <h1>Our Squad</h1>
+            <div class="squad-container">
+                <div class="member">
+                    <img src="images/emake.png" alt="Member 1" width="200" height="250">
+                    <div class="info">
+                        <h2>Jane Doe</h2>
+                        <p>Secretary</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <img src="images/david.png" alt="Member 2" width="200" height="250">
+                    <div class="info">
+                        <h2>John Smith</h2>
+                        <p>President</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <img src="images/tolu.png" alt="Member 3" width="200" height="250">
+                    <div class="info">
+                        <h2>Emily Johnson</h2>
+                        <p>Treasurer</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <img src="images/kola.png" alt="Member 4" width="200" height="250">
+                    <div class="info">
+                        <h2>Michael Brown</h2>
+                        <p>Vice President</p>
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+        <!-- Social Circle Section -->
+        <section class="social-circle">
+            <div class="container">
+                <h1>Join Our Social Circle!</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon facebook">f</a>
+                    <a href="https://x.com/futa_msa?t=C1yYzhRBM9L13dsWGN2KbQ&s=09" class="icon twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/p/CuyQp4SICXZ/?igsh=MW05eGQ4a2xpZHV4NA==" class="icon instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@futa_msa?_t=8psb9hHjOAo&_r=1" class="icon tiktok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                            <path d="M15 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                            <path d="M15 20V8"></path>
+                            <path d="M9 20v-8"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section class="get-in-touch">
+            <div class="container">
+                <h1>Get in Touch Now!</h1>
+                <!-- ... (keep the existing contact form) ... -->
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send It!</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="contact-us">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <!-- ... (keep the existing contact information) ... -->
+                <div class="grid">
+                    <div class="card">
+                        <h2>Phone</h2>
+                        <p>+234 123 456 7890</p>
+                    </div>
+                    <div class="card">
+                        <h2>Email</h2>
+                        <p>info@futamsa.edu.ng</p>
+                    </div>
+                    <div class="card">
+                        <h2>Address</h2>
+                        <p>FUTA Campus, Akure, Nigeria</p>
+                    </div>
+                    <div class="card">
+                        <h2>Office Hours</h2>
+                        <p>Mon-Fri: 9 AM - 5 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleFaq(index) {
+            // Add the JavaScript function for FAQ toggle
+            onclick="toggleFaq(0)"
+            onclick="toggleFaq(1)"
+            onclick="toggleFaq(2)"
+            onclick="toggleFaq(3)"
+            onclick="toggleFaq(4)"
+        }
+    </script>
 </body>
 </html>
-
